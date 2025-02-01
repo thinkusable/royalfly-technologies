@@ -9,6 +9,7 @@ import {
 } from "../utils/animations";
 import { cn } from "@/lib/utils";
 import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
+// import { BackgroundBeams } from "./ui/background-beams";
 
 export default function Hero() {
 	return (
@@ -33,6 +34,7 @@ export default function Hero() {
 							)}
 						/>
 					</motion.div>
+					{/* <BackgroundBeams /> */}
 				</div>
 			</div>
 
@@ -46,14 +48,14 @@ export default function Hero() {
 					variants={itemVariants}
 					className="text-4xl md:text-6xl font-bold text-white mb-6"
 				>
-					Innovating the Future of Electronics
+					Shaping the Future with Smarter Electronics
 				</motion.h1>
 				<motion.p
 					variants={itemVariants}
 					className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
 				>
-					Visakhapatnam&apos;s first electronics product design company,
-					delivering end-to-end solutions through R&D-driven innovation
+					Royal Fly is an electronic product design and development company
+					offering end-to-end services powered by R&D-driven innovation.
 				</motion.p>
 				<motion.div
 					variants={itemVariants}
@@ -61,7 +63,7 @@ export default function Hero() {
 				>
 					<motion.a
 						{...buttonHoverScale}
-						href="#contact"
+						href="#about"
 						className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all"
 					>
 						Get Started

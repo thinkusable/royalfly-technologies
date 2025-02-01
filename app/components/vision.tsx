@@ -33,8 +33,8 @@ export default function Vision() {
 							Global Leadership
 						</h3>
 						<p className="text-neutral-300 text-center">
-							Aspiring to become a global leader in electronics innovation and
-							product development
+							To Lead the global electronics industry through innovative
+							products with world-class designs
 						</p>
 					</div>
 
@@ -58,8 +58,8 @@ export default function Vision() {
 							Client Empowerment
 						</h3>
 						<p className="text-neutral-300 text-center">
-							Enabling our clients to achieve their technological aspirations
-							through innovative solutions
+							To Empower clients with cutting-edge solutions that work for them
+							and Drive Their Business Success
 						</p>
 					</div>
 
@@ -83,8 +83,8 @@ export default function Vision() {
 							Innovation Focus
 						</h3>
 						<p className="text-neutral-300 text-center">
-							Continuously pushing boundaries through research and development
-							excellence
+							To Develop State-of-the-Art Products That Solve Modern Challenges
+							and Drive Transformative Change
 						</p>
 					</div>
 
@@ -105,20 +105,20 @@ export default function Vision() {
 							</svg>
 						</div>
 						<h3 className="text-xl font-semibold text-center mb-4">
-							Cost-effective Solutions
+							Value-Driven Solutions
 						</h3>
 						<p className="text-neutral-300 text-center">
-							Delivering high-quality solutions while maintaining optimal cost
-							efficiency
+							Delivering High-Quality, Cost-Effective Solutions That Drive Value
+							for Our Client&apos;s Businesses
 						</p>
 					</div>
 				</div>
 
 				<div className="text-center mt-16 animate__animated animate__fadeInUp animate__delay-4s">
 					<p className="text-xl text-neutral-300 max-w-3xl mx-auto">
-						&quot;Our vision is to revolutionize the electronics industry
-						through innovative design and development, making cutting-edge
-						technology accessible to businesses worldwide.&quot;
+						&quot;Our vision is to transform the electronics industry through
+						innovation, delivering cutting-edge products and designs that make
+						advanced technology accessible and beneficial to everyone&quot;
 					</p>
 				</div>
 			</div>

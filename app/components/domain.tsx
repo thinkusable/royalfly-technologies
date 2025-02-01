@@ -2,11 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import {
-	containerVariants,
-	itemVariants,
-	hoverScale,
-} from "../utils/animations";
+import { itemVariants, hoverScale } from "../utils/animations";
 
 export default function Domain() {
 	return (
@@ -19,14 +15,14 @@ export default function Domain() {
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true, amount: 0.3 }}
-				variants={containerVariants}
+				variants={itemVariants}
 			>
 				<motion.div
 					className="text-center mb-16"
 					variants={itemVariants}
 				>
 					<h2 className="text-4xl font-bold text-neutral-900 mb-4">
-						Our Expertise Domains
+						Our Expertise
 					</h2>
 					<div className="w-20 h-1 bg-blue-600 mx-auto"></div>
 				</motion.div>
@@ -66,10 +62,21 @@ export default function Domain() {
 							description: "Innovative wearable device solutions",
 							icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
 						},
+						{
+							title: "Signal Processing",
+							description:
+								"Transforming audio, video, and biomedical signal data into actionable insights",
+							icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+						},
+						{
+							title: "Robotics",
+							description:
+								"Redefining automation with autonomous systems for drones, rovers",
+							icon: "M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z",
+						},
 					].map((domain, index) => (
 						<motion.div
 							key={index}
-							variants={itemVariants}
 							className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-neutral-100"
 							{...hoverScale}
 						>
