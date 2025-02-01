@@ -156,8 +156,7 @@ export default function Contact() {
 									<div>
 										<p className="text-white font-medium">Address</p>
 										<p className="text-gray-300">
-											Flat 303, SRC Residency, Madhuranagar, Visakhapatnam,
-											Andhra Pradesh, India
+											Dwarakanagar, Visakhapatnam, Andhra Pradesh, India
 										</p>
 									</div>
 								</div>
