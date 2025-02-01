@@ -24,12 +24,7 @@ const CapabilityCard = ({
 	icon: React.ComponentType<React.ComponentProps<"svg">>;
 	children: React.ReactNode;
 }) => (
-	<motion.div
-		className="w-full mb-6 bg-neutral-800 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
-		initial={{ opacity: 0, y: 20 }}
-		whileInView={{ opacity: 1, y: 0 }}
-		viewport={{ once: true }}
-	>
+	<motion.div className="w-full mb-6 bg-neutral-800 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
 		<div className="p-4">
 			<div className="flex items-center space-x-3 mb-4">
 				<Icon className="w-6 h-6 text-blue-600" />
@@ -208,7 +203,7 @@ export default function Capabilities() {
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true }}
-					variants={containerVariants}
+					variants={itemVariants}
 				>
 					<motion.h2
 						className="text-4xl font-bold mb-4"
