@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { containerVariants, itemVariants } from "../utils/animations";
+import { itemVariants } from "../utils/animations";
 
 export default function Industries() {
 	return (
@@ -15,7 +15,7 @@ export default function Industries() {
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true, amount: 0.3 }}
-				variants={containerVariants}
+				variants={itemVariants}
 			>
 				<motion.div
 					className="text-center mb-16"
@@ -66,7 +66,6 @@ export default function Industries() {
 					].map((industry, index) => (
 						<motion.div
 							key={index}
-							variants={itemVariants}
 							className="group p-6 bg-neutral-50 rounded-xl hover:bg-blue-600 transition-all duration-300"
 							whileHover={{ scale: 1.05, y: -5 }}
 							whileTap={{ scale: 0.95 }}
