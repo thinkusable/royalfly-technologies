@@ -42,7 +42,7 @@ export default function Hero() {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.2 }}
-					className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
+					className="text-lg md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
 				>
 					Royal Fly is an electronic product design and development company
 					offering end-to-end services powered by R&D-driven innovation.
@@ -51,7 +51,7 @@ export default function Hero() {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.4 }}
-					className="flex justify-center gap-4"
+					className="flex justify-center gap-4 flex-col md:flex-row"
 				>
 					<a
 						href="#about"
@@ -68,7 +68,7 @@ export default function Hero() {
 				</motion.div>
 			</div>
 
-			<div className="absolute bottom-10 left-0 right-0 flex justify-center gap-8 text-white/50">
+			<div className="absolute bottom-10 left-0 right-0 flex justify-center gap-4 md:gap-8 text-white/50">
 				{[
 					"IoT Solutions",
 					"Embedded Systems",
@@ -77,7 +77,7 @@ export default function Hero() {
 				].map((text, index) => (
 					<div
 						key={index}
-						className="text-sm hover:text-white transition-colors duration-300"
+						className="text-xs sm:text-sm md:text-base hover:text-white transition-colors duration-300 text-center"
 					>
 						{text}
 					</div>
