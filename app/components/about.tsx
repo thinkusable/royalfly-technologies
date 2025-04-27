@@ -1,38 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const containerVariants = {
-	hidden: { opacity: 0 },
-	visible: {
-		opacity: 1,
-		transition: {
-			staggerChildren: 0.2,
-		},
-	},
-};
-
-const itemVariants = {
-	hidden: { opacity: 0, x: -20 },
-	visible: {
-		opacity: 1,
-		x: 0,
-		transition: {
-			duration: 0.5,
-		},
-	},
-};
-
-const rightItemVariants = {
-	hidden: { opacity: 0, x: 20 },
-	visible: {
-		opacity: 1,
-		x: 0,
-		transition: {
-			duration: 0.5,
-		},
-	},
-};
+import Image from "next/image";
 
 export default function About() {
 	return (
@@ -41,27 +10,27 @@ export default function About() {
 			className="py-20 bg-white"
 		>
 			<div className="container mx-auto px-4">
-				<div className="grid md:grid-cols-2 gap-12 items-start">
+				<div className="grid md:grid-cols-2 gap-12 items-center">
+					<div className="relative h-[500px] rounded-lg overflow-hidden">
+						<Image
+							src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+							alt="Team working on electronics"
+							fill
+							className="object-cover"
+						/>
+					</div>
+
 					<motion.div
-						initial="hidden"
-						whileInView="visible"
+						initial={{ opacity: 0, x: 20 }}
+						whileInView={{ opacity: 1, x: 0 }}
 						viewport={{ once: true }}
-						variants={containerVariants}
+						transition={{ duration: 0.6 }}
 					>
-						<motion.h2
-							className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6"
-							variants={itemVariants}
-						>
+						<h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
 							Building Intelligent Solutions for Modern Needs
-						</motion.h2>
-						<motion.div
-							className="w-20 h-1 bg-blue-600 mb-8"
-							variants={itemVariants}
-						></motion.div>
-						<motion.div
-							className="bg-neutral-50 p-8 rounded-lg space-y-6"
-							variants={itemVariants}
-						>
+						</h2>
+						<div className="w-20 h-1 bg-blue-600 mb-8"></div>
+						<div className="space-y-6">
 							{/* Features content */}
 							<div className="flex items-start">
 								<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -149,39 +118,33 @@ export default function About() {
 									</p>
 								</div>
 							</div>
-						</motion.div>
+						</div>
 					</motion.div>
+				</div>
 
-					<motion.div
-						className="grid grid-cols-2 gap-6 content-start h-full grid-rows-3"
-						initial="hidden"
-						whileInView="visible"
-						viewport={{ once: true }}
-						variants={rightItemVariants}
-					>
-						{[
-							{ number: "10+", text: "Years of Experience" },
-							{ number: "50+", text: "Happy Clients" },
-							{ number: "70+", text: "Successful Partnerships" },
-							{ number: "100+", text: "Projects Completed" },
-							{ number: "150+", text: "Workshops Conducted" },
-							{ number: "100%", text: "On-time Delivery" },
-						].map((item, index) => (
-							<motion.div
-								key={index}
-								className="bg-neutral-50 p-6 rounded-lg text-center hover:bg-blue-600 hover:text-white transition-all duration-300 group"
-								whileHover={{ scale: 1.05 }}
-								whileTap={{ scale: 0.95 }}
-							>
-								<h3 className="text-4xl font-bold mb-2 text-blue-600 group-hover:text-white">
-									{item.number}
-								</h3>
-								<p className="text-neutral-600 group-hover:text-white/90">
-									{item.text}
-								</p>
-							</motion.div>
-						))}
-					</motion.div>
+				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-16">
+					{[
+						{ number: "10+", text: "Years of Experience" },
+						{ number: "50+", text: "Happy Clients" },
+						{ number: "70+", text: "Successful Partnerships" },
+						{ number: "100+", text: "Projects Completed" },
+						{ number: "150+", text: "Workshops Conducted" },
+						{ number: "100%", text: "On-time Delivery" },
+					].map((item, index) => (
+						<motion.div
+							key={index}
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ duration: 0.6, delay: index * 0.1 }}
+							className="bg-neutral-50 p-6 rounded-lg text-center hover:bg-blue-600 hover:text-white transition-colors duration-300"
+						>
+							<h3 className="text-4xl font-bold mb-2 text-blue-600">
+								{item.number}
+							</h3>
+							<p className="text-neutral-600">{item.text}</p>
+						</motion.div>
+					))}
 				</div>
 			</div>
 		</section>
