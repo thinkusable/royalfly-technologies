@@ -65,7 +65,7 @@ export default function Vision() {
 							transition={{ duration: 0.6, delay: index * 0.1 }}
 							className="group relative overflow-hidden rounded-xl bg-neutral-800"
 						>
-							<div className="relative h-48">
+							<div className="relative h-48 overflow-hidden">
 								<Image
 									src={item.image}
 									alt={item.title}
